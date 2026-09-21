@@ -18,6 +18,18 @@ export function BlogSection() {
     {
       question: "Do I need a special app to scan them?",
       answer: "Most modern smartphones have built-in QR readers in their native camera apps. Just open your camera, point it at the code, and tap the popup notification that appears on your screen."
+    },
+    {
+      question: "Do QR Codes expire?",
+      answer: "Static QR codes never expire because the data is hardcoded directly into the pattern. However, dynamic QR codes require an active subscription to maintain the redirection link on our servers."
+    },
+    {
+      question: "Can I track how many times my QR Code is scanned?",
+      answer: "Yes! If you create a Dynamic QR Code, our platform provides detailed analytics including scan counts, unique visitors, geographic locations, and the types of devices used."
+    },
+    {
+      question: "Is there a limit to how many QR Codes I can generate?",
+      answer: "No, you can generate an unlimited number of static QR codes for free. For dynamic codes and advanced analytics, we offer premium plans tailored to businesses of all sizes."
     }
   ];
 
@@ -125,6 +137,66 @@ export function BlogSection() {
         </div>
       </section>
 
+      {/* Dynamic vs Static Comparison */}
+      <section className="max-w-5xl mx-auto px-4 w-full pt-12 pb-8">
+        <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col md:flex-row">
+          <div className="flex-1 p-8 md:p-12 md:border-r border-gray-100">
+            <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
+              <span className="font-bold text-gray-600">S</span>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Static QR Codes</h3>
+            <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+              Perfect for permanent information. The data is embedded directly into the code itself.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3 text-sm text-gray-700">
+                <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+                100% free forever
+              </li>
+              <li className="flex items-start gap-3 text-sm text-gray-700">
+                <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+                No scan limits
+              </li>
+              <li className="flex items-start gap-3 text-sm text-gray-400">
+                <div className="w-5 h-5 rounded-full bg-red-50 text-red-400 flex items-center justify-center shrink-0 mt-0.5">✕</div>
+                Cannot be edited after printing
+              </li>
+              <li className="flex items-start gap-3 text-sm text-gray-400">
+                <div className="w-5 h-5 rounded-full bg-red-50 text-red-400 flex items-center justify-center shrink-0 mt-0.5">✕</div>
+                No scan analytics or tracking
+              </li>
+            </ul>
+          </div>
+          <div className="flex-1 p-8 md:p-12 bg-[#f9fcfa]">
+             <div className="w-12 h-12 bg-[#4b8b3b]/10 rounded-lg flex items-center justify-center mb-6">
+              <span className="font-bold text-[#4b8b3b]">D</span>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Dynamic QR Codes</h3>
+            <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+              Built for marketers. The code points to a short URL that redirects to your content.
+            </p>
+             <ul className="space-y-3">
+              <li className="flex items-start gap-3 text-sm text-gray-700">
+                <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+                Edit the destination URL anytime
+              </li>
+              <li className="flex items-start gap-3 text-sm text-gray-700">
+                <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+                Track scans, locations, and devices
+              </li>
+              <li className="flex items-start gap-3 text-sm text-gray-700">
+                <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+                Fix typos without reprinting
+              </li>
+               <li className="flex items-start gap-3 text-sm text-gray-700">
+                <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+                Password protect your content
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Trust Section */}
       <section id="solutions" className="max-w-5xl mx-auto px-4 w-full text-center scroll-mt-24">
         <h2 className="text-3xl font-bold text-gray-900 mb-12">Why Marketers and Businesses Rely on Our QR Platform</h2>
@@ -156,7 +228,7 @@ export function BlogSection() {
       {/* Types Section */}
       <section id="products" className="max-w-5xl mx-auto px-4 w-full text-center scroll-mt-24">
         <h2 className="text-3xl font-bold text-gray-900 mb-12">Explore Our Most Popular QR Formats</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <div className="bg-[#f9f9f9] rounded-xl p-8 text-left">
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-green-500">
               <Link className="w-6 h-6" />
@@ -184,6 +256,27 @@ export function BlogSection() {
               Upload menus, product manuals, or marketing brochures. Users can view and download your documents instantly without needing bulky attachments.
             </p>
           </div>
+        </div>
+        
+        {/* Industry Use Cases (New Content) */}
+        <h2 className="text-3xl font-bold text-gray-900 mb-12 mt-20">Transforming Every Industry</h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-left">
+           <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+             <h4 className="font-bold text-gray-900 mb-2">Retail & E-commerce</h4>
+             <p className="text-xs text-gray-500 leading-relaxed">Bridge in-store and online shopping. Use QR codes on product tags to show customer reviews, styling tips, or instant reorder pages.</p>
+           </div>
+           <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+             <h4 className="font-bold text-gray-900 mb-2">Real Estate</h4>
+             <p className="text-xs text-gray-500 leading-relaxed">Place codes on "For Sale" signs to let prospective buyers instantly view 3D virtual tours, property specs, and agent contact details.</p>
+           </div>
+           <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+             <h4 className="font-bold text-gray-900 mb-2">Restaurants</h4>
+             <p className="text-xs text-gray-500 leading-relaxed">Modernize dining with contactless digital menus. Update daily specials instantly without reprinting paper menus.</p>
+           </div>
+           <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+             <h4 className="font-bold text-gray-900 mb-2">Events & Ticketing</h4>
+             <p className="text-xs text-gray-500 leading-relaxed">Streamline entry with secure, scannable QR tickets. Share event schedules and speaker bios on attendee lanyards.</p>
+           </div>
         </div>
       </section>
 
