@@ -4,40 +4,7 @@ import { BlogSection } from "@/components/layout/BlogSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50/50 flex flex-col font-sans text-gray-900">
-      {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 bg-[#4b8b3b] rounded flex items-center justify-center shadow-sm">
-              <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
-              </svg>
-            </div>
-            <h1 className="text-xl font-bold text-gray-900 tracking-tight">
-              QRGen<span className="text-[#4b8b3b]">Pro</span>
-            </h1>
-          </div>
-
-          {/* Center Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Products</a>
-            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Solutions</a>
-            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
-            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Resources</a>
-          </nav>
-
-          {/* Right Action Buttons */}
-          <div className="flex items-center gap-4">
-            <a href="#" className="hidden sm:block text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
-              Log in
-            </a>
-            <button className="bg-[#4b8b3b] hover:bg-[#3d722f] text-white text-sm font-medium px-4 py-2 rounded-md transition-colors shadow-sm">
-              Sign Up Free
-            </button>
-          </div>
-        </div>
-      </header>
+    <div className="flex-1 flex flex-col w-full">
 
       {/* Main Content */}
       <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">

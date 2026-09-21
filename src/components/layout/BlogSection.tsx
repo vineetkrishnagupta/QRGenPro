@@ -88,7 +88,7 @@ export function BlogSection() {
       </section>
 
       {/* QR Codes Explained (Accordion) */}
-      <section className="w-full bg-[#f6f9f6] py-20">
+      <section id="resources" className="w-full bg-[#f6f9f6] py-20 scroll-mt-24">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Understanding QR Codes</h2>
           <div className="flex flex-col gap-4">
@@ -113,7 +113,7 @@ export function BlogSection() {
       </section>
 
       {/* Banner */}
-      <section className="max-w-5xl mx-auto px-4 w-full">
+      <section id="pricing" className="max-w-5xl mx-auto px-4 w-full scroll-mt-24">
         <div className="bg-[#dcf0e2] rounded-2xl py-12 px-8 flex flex-col items-center text-center shadow-sm">
           <h2 className="text-2xl font-bold text-gray-900 mb-3">Create QR Codes Directly From Your Browser</h2>
           <p className="text-gray-600 mb-8 max-w-xl">
@@ -126,7 +126,7 @@ export function BlogSection() {
       </section>
 
       {/* Trust Section */}
-      <section className="max-w-5xl mx-auto px-4 w-full text-center">
+      <section id="solutions" className="max-w-5xl mx-auto px-4 w-full text-center scroll-mt-24">
         <h2 className="text-3xl font-bold text-gray-900 mb-12">Why Marketers and Businesses Rely on Our QR Platform</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-[#f9f9f9] rounded-xl p-8 flex flex-col items-center">
@@ -154,7 +154,7 @@ export function BlogSection() {
       </section>
 
       {/* Types Section */}
-      <section className="max-w-5xl mx-auto px-4 w-full text-center">
+      <section id="products" className="max-w-5xl mx-auto px-4 w-full text-center scroll-mt-24">
         <h2 className="text-3xl font-bold text-gray-900 mb-12">Explore Our Most Popular QR Formats</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-[#f9f9f9] rounded-xl p-8 text-left">
