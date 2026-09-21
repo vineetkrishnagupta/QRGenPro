@@ -37,7 +37,7 @@ export function LeftPanel() {
               onClick={() => setQrData({ type })}
               className={`flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-medium transition-all duration-200 ${
                 qrData.type === type
-                  ? "bg-[#0b5b9c] text-white shadow-sm"
+                  ? "bg-[#4b8b3b] text-white shadow-sm"
                   : "bg-gray-50 border border-gray-200 text-gray-600 hover:bg-gray-100 hover:text-gray-800"
               }`}
             >

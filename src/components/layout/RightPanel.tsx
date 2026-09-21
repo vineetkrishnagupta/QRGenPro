@@ -35,7 +35,7 @@ export function RightPanel() {
         <div className="w-full grid grid-cols-1 gap-3">
           <button 
             onClick={() => handleDownload("png")}
-            className="w-full py-2.5 px-4 bg-[#0b5b9c] hover:bg-[#09487d] text-white rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2 shadow-sm"
+            className="w-full py-2.5 px-4 bg-[#4b8b3b] hover:bg-[#3d722f] text-white rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2 shadow-sm"
           >
             <Download className="w-4 h-4" />
             Download PNG

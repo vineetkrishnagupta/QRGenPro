@@ -9,14 +9,32 @@ export default function Home() {
       <header className="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 bg-[#0b5b9c] rounded flex items-center justify-center shadow-sm">
+            <div className="w-8 h-8 bg-[#4b8b3b] rounded flex items-center justify-center shadow-sm">
               <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
               </svg>
             </div>
             <h1 className="text-xl font-bold text-gray-900 tracking-tight">
-              QRGen<span className="text-[#0b5b9c]">Pro</span>
+              QRGen<span className="text-[#4b8b3b]">Pro</span>
             </h1>
+          </div>
+
+          {/* Center Navigation */}
+          <nav className="hidden md:flex items-center gap-8">
+            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Products</a>
+            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Solutions</a>
+            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
+            <a href="#" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Resources</a>
+          </nav>
+
+          {/* Right Action Buttons */}
+          <div className="flex items-center gap-4">
+            <a href="#" className="hidden sm:block text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+              Log in
+            </a>
+            <button className="bg-[#4b8b3b] hover:bg-[#3d722f] text-white text-sm font-medium px-4 py-2 rounded-md transition-colors shadow-sm">
+              Sign Up Free
+            </button>
           </div>
         </div>
       </header>
@@ -37,9 +55,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                <div className="w-8 h-8 bg-[#4b8b3b] rounded flex items-center justify-center shadow-sm">
+                  <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-white">QRGen Pro</h3>
@@ -52,19 +70,19 @@ export default function Home() {
             <div>
               <h4 className="text-white font-semibold mb-4">Features</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-blue-400 transition-colors">URL to QR</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors">vCard Generator</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors">WiFi QR Creator</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors">Custom Logos</a></li>
+                <li><a href="#" className="hover:text-[#4b8b3b] transition-colors">URL to QR</a></li>
+                <li><a href="#" className="hover:text-[#4b8b3b] transition-colors">vCard Generator</a></li>
+                <li><a href="#" className="hover:text-[#4b8b3b] transition-colors">WiFi QR Creator</a></li>
+                <li><a href="#" className="hover:text-[#4b8b3b] transition-colors">Custom Logos</a></li>
               </ul>
             </div>
             
             <div>
               <h4 className="text-white font-semibold mb-4">Legal</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-blue-400 transition-colors">Contact Us</a></li>
+                <li><a href="#" className="hover:text-[#4b8b3b] transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="hover:text-[#4b8b3b] transition-colors">Terms of Service</a></li>
+                <li><a href="#" className="hover:text-[#4b8b3b] transition-colors">Contact Us</a></li>
               </ul>
             </div>
           </div>

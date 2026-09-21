@@ -37,7 +37,7 @@ export function CustomizationPanel() {
               type="text"
               value={qrOptions.dotsOptions.color}
               onChange={(e) => setDeepQrOptions("dotsOptions", { color: e.target.value })}
-              className="flex-1 p-2 border border-gray-300 rounded-md text-sm outline-none focus:border-[#0b5b9c]"
+              className="flex-1 p-2 border border-gray-300 rounded-md text-sm outline-none focus:border-[#4b8b3b]"
             />
           </div>
         </div>
@@ -54,7 +54,7 @@ export function CustomizationPanel() {
               type="text"
               value={qrOptions.backgroundOptions.color}
               onChange={(e) => setDeepQrOptions("backgroundOptions", { color: e.target.value })}
-              className="flex-1 p-2 border border-gray-300 rounded-md text-sm outline-none focus:border-[#0b5b9c]"
+              className="flex-1 p-2 border border-gray-300 rounded-md text-sm outline-none focus:border-[#4b8b3b]"
             />
           </div>
         </div>
@@ -67,7 +67,7 @@ export function CustomizationPanel() {
           <select
             value={qrOptions.dotsOptions.type}
             onChange={(e) => setDeepQrOptions("dotsOptions", { type: e.target.value })}
-            className="w-full p-2.5 rounded-md border border-gray-300 focus:border-[#0b5b9c] bg-white text-sm outline-none transition-all"
+            className="w-full p-2.5 rounded-md border border-gray-300 focus:border-[#4b8b3b] bg-white text-sm outline-none transition-all"
           >
             <option value="square">Square</option>
             <option value="rounded">Rounded</option>
@@ -82,7 +82,7 @@ export function CustomizationPanel() {
           <select
             value={qrOptions.cornersSquareOptions.type}
             onChange={(e) => setDeepQrOptions("cornersSquareOptions", { type: e.target.value })}
-            className="w-full p-2.5 rounded-md border border-gray-300 focus:border-[#0b5b9c] bg-white text-sm outline-none transition-all"
+            className="w-full p-2.5 rounded-md border border-gray-300 focus:border-[#4b8b3b] bg-white text-sm outline-none transition-all"
           >
             <option value="square">Square</option>
             <option value="dot">Dot</option>
@@ -94,7 +94,7 @@ export function CustomizationPanel() {
           <select
             value={qrOptions.qrOptions.errorCorrectionLevel}
             onChange={(e) => setDeepQrOptions("qrOptions", { errorCorrectionLevel: e.target.value })}
-            className="w-full p-2.5 rounded-md border border-gray-300 focus:border-[#0b5b9c] bg-white text-sm outline-none transition-all"
+            className="w-full p-2.5 rounded-md border border-gray-300 focus:border-[#4b8b3b] bg-white text-sm outline-none transition-all"
           >
             <option value="L">Low (7%)</option>
             <option value="M">Medium (15%) - Default</option>
@@ -107,7 +107,7 @@ export function CustomizationPanel() {
           <select
             value={qrOptions.cornersDotOptions.type}
             onChange={(e) => setDeepQrOptions("cornersDotOptions", { type: e.target.value })}
-            className="w-full p-2.5 rounded-md border border-gray-300 focus:border-[#0b5b9c] bg-white text-sm outline-none transition-all"
+            className="w-full p-2.5 rounded-md border border-gray-300 focus:border-[#4b8b3b] bg-white text-sm outline-none transition-all"
           >
             <option value="square">Square</option>
             <option value="dot">Dot</option>

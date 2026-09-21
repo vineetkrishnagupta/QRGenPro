@@ -8,16 +8,16 @@ export function BlogSection() {
 
   const faqs = [
     {
-      question: "What is a QR Code?",
-      answer: "A QR code (Quick Response code) is a two-dimensional barcode that can store vast amounts of data, from website URLs and text to contact information and payment details. Unlike traditional barcodes, QR codes can be scanned quickly using a smartphone camera, making them an essential tool for modern marketing, networking, and seamless information sharing."
+      question: "What exactly is a QR Code?",
+      answer: "A Quick Response (QR) code is a 2D matrix barcode designed to hold a large amount of digital information. Unlike traditional vertical barcodes, QR codes can be instantly read by smartphone cameras, seamlessly connecting physical objects to digital experiences."
     },
     {
-      question: "Why do so many people use QR Codes in 2026?",
-      answer: "Because they seamlessly bridge the gap between the physical and digital worlds. With built-in smartphone scanners, consumers expect instant access to menus, websites, and promotions without typing URLs."
+      question: "Why are QR codes so popular today?",
+      answer: "They offer a frictionless way to share information. Instead of typing long web addresses, users simply point their cameras to access menus, process payments, or save contact details in a fraction of a second."
     },
     {
-      question: "How do I scan one?",
-      answer: "Simply open your smartphone's camera app, point it at the QR code, and tap the link that appears on your screen. No special apps are required for modern iOS and Android devices."
+      question: "Do I need a special app to scan them?",
+      answer: "Most modern smartphones have built-in QR readers in their native camera apps. Just open your camera, point it at the code, and tap the popup notification that appears on your screen."
     }
   ];
 
@@ -26,7 +26,7 @@ export function BlogSection() {
       
       {/* 3 Simple Steps Section */}
       <section className="max-w-5xl mx-auto w-full px-4 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-16">How to create a free QR Code in 3 simple steps</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-16">Generate Your Free QR Code in 3 Easy Steps</h2>
         
         <div className="flex flex-col gap-20">
           {/* Step 1 */}
@@ -51,9 +51,9 @@ export function BlogSection() {
             </div>
             <div className="flex-1 text-left">
               <div className="w-8 h-8 bg-[#4b8b3b] text-white rounded-full flex items-center justify-center font-bold text-sm shadow-md mb-4 md:hidden">1</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Choose your QR Code type</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Select Your Data Format</h3>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Choose your QR Code type (static or dynamic) based on what you want it to do: open a URL, share a PDF, display a menu, share contact details, and more.
+                Pick the type of content you want to share. Whether it's a website link, digital business card, WiFi network, or a plain text message, we have a specialized template ready for you.
               </p>
             </div>
           </div>
@@ -78,9 +78,9 @@ export function BlogSection() {
             </div>
             <div className="flex-1 text-left md:text-right">
               <div className="w-8 h-8 bg-[#4b8b3b] text-white rounded-full flex items-center justify-center font-bold text-sm shadow-md mb-4 md:hidden">2</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Customize it your way</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Personalize Your Design</h3>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Add your details, change the color, style your QR Code, add a logo, and test it in real time before you download and share.
+                Make it yours by adjusting colors, tweaking the corner shapes, and embedding your brand's logo. Our live preview lets you see exactly how it looks before you hit download.
               </p>
             </div>
           </div>
@@ -90,7 +90,7 @@ export function BlogSection() {
       {/* QR Codes Explained (Accordion) */}
       <section className="w-full bg-[#f6f9f6] py-20">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">QR Codes explained</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Understanding QR Codes</h2>
           <div className="flex flex-col gap-4">
             {faqs.map((faq, index) => (
               <div key={index} className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
@@ -115,73 +115,73 @@ export function BlogSection() {
       {/* Banner */}
       <section className="max-w-5xl mx-auto px-4 w-full">
         <div className="bg-[#dcf0e2] rounded-2xl py-12 px-8 flex flex-col items-center text-center shadow-sm">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">Generate a QR Code without leaving your tab</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">Create QR Codes Directly From Your Browser</h2>
           <p className="text-gray-600 mb-8 max-w-xl">
-            No more switching screens or copying links. Just tap the TQRCG Chrome Extension to create a QR Code with just a click.
+            Stop jumping between tabs. Install our free browser extension to instantly generate QR codes for any webpage you're currently visiting with a single click.
           </p>
           <button className="bg-[#4b8b3b] hover:bg-[#3d722f] text-white px-6 py-3 rounded-md font-semibold transition-colors">
-            Get the free QR Code Extension
+            Download Free Extension
           </button>
         </div>
       </section>
 
       {/* Trust Section */}
       <section className="max-w-5xl mx-auto px-4 w-full text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12">Why 4 Million+ Users Trust TQRCG for ROI Driven QR Code Campaigns</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-12">Why Marketers and Businesses Rely on Our QR Platform</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-[#f9f9f9] rounded-xl p-8 flex flex-col items-center">
             <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-purple-500">
               <FileBarChart className="w-10 h-10" />
             </div>
-            <h3 className="font-bold text-gray-900 mb-2">Track every scan</h3>
-            <p className="text-gray-500 text-sm">Monitor scan locations, times, and devices to measure your campaign's true ROI.</p>
+            <h3 className="font-bold text-gray-900 mb-2">Real-Time Analytics</h3>
+            <p className="text-gray-500 text-sm">Gain insights into how your campaigns perform by tracking scan locations, timestamps, and device metrics.</p>
           </div>
           <div className="bg-[#f9f9f9] rounded-xl p-8 flex flex-col items-center">
             <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-emerald-500">
               <Smartphone className="w-10 h-10" />
             </div>
-            <h3 className="font-bold text-gray-900 mb-2">Free dynamic QR Codes</h3>
-            <p className="text-gray-500 text-sm">Update the destination URL even after your QR code has been printed.</p>
+            <h3 className="font-bold text-gray-900 mb-2">Editable Dynamic Codes</h3>
+            <p className="text-gray-500 text-sm">Change the link behind your QR code at any time without needing to reprint your physical marketing materials.</p>
           </div>
           <div className="bg-[#f9f9f9] rounded-xl p-8 flex flex-col items-center">
             <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-orange-400">
               <Users className="w-10 h-10" />
             </div>
-            <h3 className="font-bold text-gray-900 mb-2">Collaborate with Your Team</h3>
-            <p className="text-gray-500 text-sm">Share workspaces and manage large scale QR campaigns together seamlessly.</p>
+            <h3 className="font-bold text-gray-900 mb-2">Seamless Team Collaboration</h3>
+            <p className="text-gray-500 text-sm">Invite team members, share project folders, and manage large-scale marketing campaigns from a unified dashboard.</p>
           </div>
         </div>
       </section>
 
       {/* Types Section */}
       <section className="max-w-5xl mx-auto px-4 w-full text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12">What types of QR Codes can you create for free?</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-12">Explore Our Most Popular QR Formats</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-[#f9f9f9] rounded-xl p-8 text-left">
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-green-500">
               <Link className="w-6 h-6" />
             </div>
-            <h3 className="font-bold text-gray-900 mb-3 text-lg">Website (URL)</h3>
+            <h3 className="font-bold text-gray-900 mb-3 text-lg">Web Links (URL)</h3>
             <p className="text-gray-500 text-xs leading-relaxed">
-              Turn any flyer, product label, or poster into a direct traffic booster by linking it to your website, landing page, or online store. With just a quick scan, people are where you want them to be — and if your link changes, dynamic QR Codes let you update the URL anytime without reprinting.
+              Drive instant traffic to your landing pages, online stores, or social media profiles. URL codes are the perfect bridge between print media and your digital presence.
             </p>
           </div>
           <div className="bg-[#f9f9f9] rounded-xl p-8 text-left">
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-orange-500">
               <Link className="w-6 h-6" />
             </div>
-            <h3 className="font-bold text-gray-900 mb-3 text-lg">Multi-URL</h3>
+            <h3 className="font-bold text-gray-900 mb-3 text-lg">Smart Multi-Links</h3>
             <p className="text-gray-500 text-xs leading-relaxed">
-              Link websites, videos, and social profiles in a single QR Code. This works well for campaigns where you want to offer multiple options. You can update or reorder the links anytime without creating a new code.
+              Route users to different destinations based on their device OS, language, or location using a single intelligent QR code.
             </p>
           </div>
           <div className="bg-[#f9f9f9] rounded-xl p-8 text-left">
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-6 text-purple-500">
               <FileText className="w-6 h-6" />
             </div>
-            <h3 className="font-bold text-gray-900 mb-3 text-lg">PDF (Files)</h3>
+            <h3 className="font-bold text-gray-900 mb-3 text-lg">Document Sharing (PDF)</h3>
             <p className="text-gray-500 text-xs leading-relaxed">
-              Share brochures, menus, e-books, or guides as downloadable PDFs. It is a clean way to keep your audience informed without bulky attachments. You can also upload a new file anytime using a dynamic QR Code.
+              Upload menus, product manuals, or marketing brochures. Users can view and download your documents instantly without needing bulky attachments.
             </p>
           </div>
         </div>
@@ -189,7 +189,7 @@ export function BlogSection() {
 
       {/* Placement Section */}
       <section className="max-w-5xl mx-auto px-4 w-full text-center pb-24">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12">Where to place your QR Code to improve scans?</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-12">Best Practices for QR Code Placement</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-[#f9f9f9] rounded-xl overflow-hidden text-left border border-gray-100 flex flex-col">
             <div className="h-48 bg-orange-100 w-full relative">
@@ -199,9 +199,9 @@ export function BlogSection() {
                </div>
             </div>
             <div className="p-6">
-              <h3 className="font-bold text-gray-900 mb-3 text-lg">Packaging</h3>
+              <h3 className="font-bold text-gray-900 mb-3 text-lg">Product Packaging</h3>
               <p className="text-gray-500 text-xs leading-relaxed">
-                Add QR Codes to product boxes, labels, or inserts. Use it to share manuals, how-to videos, or warranty details to help customers access useful content right after purchase without extra steps.
+                Enhance your unboxing experience. Link to assembly videos, warranty registrations, or exclusive discounts right on your product boxes.
               </p>
             </div>
           </div>
@@ -216,9 +216,9 @@ export function BlogSection() {
                </div>
             </div>
             <div className="p-6">
-              <h3 className="font-bold text-gray-900 mb-3 text-lg">Posters and Flyers</h3>
+              <h3 className="font-bold text-gray-900 mb-3 text-lg">Print Advertising</h3>
               <p className="text-gray-500 text-xs leading-relaxed">
-                Place QR Codes on marketing materials to drive sign-ups, event registrations, or website visits. Turn offline interest into instant online engagement.
+                Boost offline engagement by adding scannable calls-to-action on flyers, billboards, and magazine ads to drive direct online conversions.
               </p>
             </div>
           </div>
@@ -232,9 +232,9 @@ export function BlogSection() {
                </div>
             </div>
             <div className="p-6">
-              <h3 className="font-bold text-gray-900 mb-3 text-lg">Business Cards</h3>
+              <h3 className="font-bold text-gray-900 mb-3 text-lg">Networking Cards</h3>
               <p className="text-gray-500 text-xs leading-relaxed">
-                Share all your contact details with a single scan — website, phone, LinkedIn, or calendar link. Ideal for networking events or remote introductions.
+                Modernize your business cards. Allow new connections to save your phone number, email, and LinkedIn profile straight to their contacts with one scan.
               </p>
             </div>
           </div>
