@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "QRGen Pro - Professional QR Code Generator",
-  description: "Create highly customizable QR codes for your business.",
+  description: "Create highly customizable QR codes for vvyour business.",
 };
 
 export default function RootLayout({
