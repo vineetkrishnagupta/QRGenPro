@@ -48,6 +48,7 @@ export type QrOptions = {
   width: number;
   height: number;
   margin: number;
+  type?: 'canvas' | 'svg';
   data: string;
   image?: string;
   dotsOptions: {
@@ -80,6 +81,7 @@ export const defaultQrOptions: QrOptions = {
   width: 300,
   height: 300,
   margin: 10,
+  type: "svg",
   data: 'https://example.com',
   imageOptions: {
     crossOrigin: "anonymous",
