@@ -15,7 +15,7 @@ export function Header() {
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-[0_2px_8px_rgba(0,0,0,0.02)] print:hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5">
+        <Link href="/" className="flex items-center gap-2.5" aria-label="QRGen Pro – Home">
           <div className="w-8 h-8 bg-[#4b8b3b] rounded flex items-center justify-center shadow-sm">
             <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
@@ -27,7 +27,7 @@ export function Header() {
         </Link>
 
         {/* Center Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav aria-label="Main navigation" className="hidden md:flex items-center gap-8">
           <Link href="/#products" className="text-sm font-medium text-gray-600 hover:text-gray-900 focus-visible:ring-2 focus-visible:ring-[#4b8b3b] outline-none rounded-sm px-1 transition-colors">Products</Link>
           <Link href="/#solutions" className="text-sm font-medium text-gray-600 hover:text-gray-900 focus-visible:ring-2 focus-visible:ring-[#4b8b3b] outline-none rounded-sm px-1 transition-colors">Solutions</Link>
           <Link href="/#pricing" className="text-sm font-medium text-gray-600 hover:text-gray-900 focus-visible:ring-2 focus-visible:ring-[#4b8b3b] outline-none rounded-sm px-1 transition-colors">Pricing</Link>

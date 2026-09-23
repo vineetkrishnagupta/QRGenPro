@@ -1,10 +1,105 @@
+import type { Metadata } from "next";
 import { LeftPanel } from "@/components/layout/LeftPanel";
 import { RightPanel } from "@/components/layout/RightPanel";
 import { BlogSection } from "@/components/layout/BlogSection";
 
-export default function Home() {
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "QRGen Pro",
+  url: "https://qrgenpro.com",
+  description:
+    "Free, highly customizable QR code generator for URLs, vCards, WiFi networks, and more. Download in SVG or PNG format.",
+  applicationCategory: "UtilitiesApplication",
+  operatingSystem: "Any",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  featureList: [
+    "URL QR Codes",
+    "vCard QR Codes",
+    "WiFi QR Codes",
+    "Custom Logo QR Codes",
+    "Dynamic QR Codes with analytics",
+    "SVG & PNG download",
+  ],
+};
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What exactly is a QR Code?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A Quick Response (QR) code is a 2D matrix barcode designed to hold a large amount of digital information. Unlike traditional vertical barcodes, QR codes can be instantly read by smartphone cameras, seamlessly connecting physical objects to digital experiences.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why are QR codes so popular today?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "They offer a frictionless way to share information. Instead of typing long web addresses, users simply point their cameras to access menus, process payments, or save contact details in a fraction of a second.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need a special app to scan them?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most modern smartphones have built-in QR readers in their native camera apps. Just open your camera, point it at the code, and tap the popup notification that appears on your screen.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do QR Codes expire?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Static QR codes never expire because the data is hardcoded directly into the pattern. However, dynamic QR codes require an active subscription to maintain the redirection link on our servers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I track how many times my QR Code is scanned?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes! If you create a Dynamic QR Code, our platform provides detailed analytics including scan counts, unique visitors, geographic locations, and the types of devices used.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is there a limit to how many QR Codes I can generate?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No, you can generate an unlimited number of static QR codes for free. For dynamic codes and advanced analytics, we offer premium plans tailored to businesses of all sizes.",
+      },
+    },
+  ],
+};
+
   return (
     <div className="flex-1 flex flex-col w-full">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {/* FAQ JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
+      {/* Visually hidden h1 for heading hierarchy & SEO */}
+      <h1 className="sr-only">QRGen Pro – Free QR Code Generator</h1>
 
       {/* Main Content */}
       <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
@@ -17,7 +112,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+      <footer aria-label="Site footer" className="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">

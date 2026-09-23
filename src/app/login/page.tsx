@@ -25,7 +25,7 @@ export default function LoginPage() {
     <div className="flex-1 flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 w-full h-full min-h-[calc(100vh-64px)]">
       <div className="max-w-md w-full bg-white rounded-xl shadow-lg border border-gray-100 p-8">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-2">Welcome back</h2>
+          <h1 className="text-3xl font-bold text-gray-900 tracking-tight mb-2">Welcome back</h1>
           <p className="text-gray-500 text-sm">Log in to your QRGen Pro account</p>
         </div>
 
