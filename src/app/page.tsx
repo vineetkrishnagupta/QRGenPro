@@ -30,6 +30,7 @@ const jsonLd = {
     "SVG & PNG download",
   ],
 };
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -85,6 +86,7 @@ const faqJsonLd = {
   ],
 };
 
+export default function Home() {
   return (
     <div className="flex-1 flex flex-col w-full">
       {/* JSON-LD Structured Data */}
@@ -151,7 +153,7 @@ const faqJsonLd = {
           
           <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
             <p>&copy; {new Date().getFullYear()} QRGen Pro. All rights reserved.</p>
-            <p className="mt-2 md:mt-0">Built with Next.js & Tailwind CSS</p>
+            <p className="mt-2 md:mt-0">Built with Next.js &amp; Tailwind CSS</p>
           </div>
         </div>
       </footer>
