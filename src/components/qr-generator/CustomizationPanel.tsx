@@ -1,23 +1,35 @@
 "use client";
 
+import { useState } from "react";
 import { useQrStore } from "@/store/qrStore";
 
 export function CustomizationPanel() {
   const { qrOptions, setDeepQrOptions, setQrOptions } = useQrStore();
+  const [logoError, setLogoError] = useState<string | null>(null);
 
   const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (file) {
-      if (file.size > 2 * 1024 * 1024) {
-        alert("File size should be less than 2MB to maintain scannability.");
-        return;
-      }
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        setQrOptions({ image: event.target?.result as string });
-      };
-      reader.readAsDataURL(file);
+    if (!file) return;
+
+    if (!file.type.startsWith("image/")) {
+      setLogoError("Please select a valid image file (PNG, JPG, SVG, or WebP).");
+      return;
     }
+
+    if (file.size > 2 * 1024 * 1024) {
+      setLogoError("Image size exceeds 2MB. Please choose a smaller file.");
+      return;
+    }
+
+    setLogoError(null);
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      setQrOptions({ image: event.target?.result as string });
+    };
+    reader.onerror = () => {
+      setLogoError("Failed to load image file. Please try another image.");
+    };
+    reader.readAsDataURL(file);
   };
 
   return (
@@ -125,13 +137,21 @@ export function CustomizationPanel() {
           </label>
           {qrOptions.image && (
             <button
-              onClick={() => setQrOptions({ image: undefined })}
+              onClick={() => {
+                setQrOptions({ image: undefined });
+                setLogoError(null);
+              }}
               className="text-sm text-red-600 hover:text-red-700 font-medium"
             >
               Remove Logo
             </button>
           )}
         </div>
+        {logoError && (
+          <p className="text-xs text-red-600 font-medium bg-red-50 border border-red-200 rounded-md p-2" role="alert">
+            {logoError}
+          </p>
+        )}
         <p className="text-xs text-gray-500">Max size 2MB. Use higher error correction when adding a logo.</p>
       </div>
     </div>
