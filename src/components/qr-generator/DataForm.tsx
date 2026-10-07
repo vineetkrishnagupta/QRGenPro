@@ -1,9 +1,20 @@
 "use client";
 
 import { useQrStore } from "@/store/qrStore";
+import { QrData } from "@/types/qr";
 
 export function DataForm() {
   const { qrData, setQrData } = useQrStore();
+
+  const isEmailValid = (email?: string) => {
+    if (!email) return true;
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const isUpiValid = (upiId?: string) => {
+    if (!upiId) return true;
+    return /^[\w.-]+@[\w.-]+$/.test(upiId);
+  };
 
   switch (qrData.type) {
     case "text":
@@ -29,12 +40,12 @@ export function DataForm() {
           <input
             type="url"
             value={qrData.url || ""}
-            onChange={(e) => setQrData({ url: e.target.value })}
+            onChange={(e) => setQrData({ url: e.target.value.trim() })}
             placeholder="https://example.com"
             className="w-full p-2.5 rounded-md border border-gray-300 focus:border-[#4b8b3b] focus:ring-1 focus:ring-[#4b8b3b] outline-none transition-all text-sm"
           />
-          {qrData.url && !qrData.url.startsWith("http") && (
-            <span className="text-xs text-amber-600">Consider adding https:// or http://</span>
+          {qrData.url && !qrData.url.startsWith("http://") && !qrData.url.startsWith("https://") && (
+            <span className="text-xs text-amber-600">Consider prefixing with https:// or http://</span>
           )}
         </div>
       );
@@ -47,10 +58,17 @@ export function DataForm() {
             <input
               type="email"
               value={qrData.email || ""}
-              onChange={(e) => setQrData({ email: e.target.value })}
+              onChange={(e) => setQrData({ email: e.target.value.trim() })}
               placeholder="hello@example.com"
-              className="w-full p-2.5 rounded-md border border-gray-300 focus:border-[#4b8b3b] focus:ring-1 focus:ring-[#4b8b3b] outline-none transition-all text-sm"
+              className={`w-full p-2.5 rounded-md border outline-none transition-all text-sm ${
+                qrData.email && !isEmailValid(qrData.email)
+                  ? "border-amber-400 focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
+                  : "border-gray-300 focus:border-[#4b8b3b] focus:ring-1 focus:ring-[#4b8b3b]"
+              }`}
             />
+            {qrData.email && !isEmailValid(qrData.email) && (
+              <span className="text-xs text-amber-600">Please enter a valid email address</span>
+            )}
           </div>
           <div className="flex flex-col gap-2">
             <label className="text-sm font-medium text-gray-700">Subject (Optional)</label>
@@ -140,7 +158,7 @@ export function DataForm() {
             <label className="text-sm font-medium text-gray-700">Encryption</label>
             <select
               value={qrData.encryption || "WPA"}
-              onChange={(e) => setQrData({ encryption: e.target.value as any })}
+              onChange={(e) => setQrData({ encryption: e.target.value as QrData["encryption"] })}
               className="w-full p-2.5 rounded-md border border-gray-300 focus:border-[#4b8b3b] focus:ring-1 focus:ring-[#4b8b3b] outline-none transition-all text-sm bg-white"
             >
               <option value="WPA">WPA/WPA2/WPA3</option>
@@ -306,10 +324,17 @@ export function DataForm() {
             <input
               type="text"
               value={qrData.upiId || ""}
-              onChange={(e) => setQrData({ upiId: e.target.value })}
+              onChange={(e) => setQrData({ upiId: e.target.value.trim() })}
               placeholder="example@upi"
-              className="w-full p-2.5 rounded-md border border-gray-300 focus:border-[#4b8b3b] focus:ring-1 focus:ring-[#4b8b3b] outline-none transition-all text-sm"
+              className={`w-full p-2.5 rounded-md border outline-none transition-all text-sm ${
+                qrData.upiId && !isUpiValid(qrData.upiId)
+                  ? "border-amber-400 focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
+                  : "border-gray-300 focus:border-[#4b8b3b] focus:ring-1 focus:ring-[#4b8b3b]"
+              }`}
             />
+            {qrData.upiId && !isUpiValid(qrData.upiId) && (
+              <span className="text-xs text-amber-600">Enter a valid UPI ID (e.g. username@bank)</span>
+            )}
           </div>
           <div className="flex flex-col gap-2">
             <label className="text-sm font-medium text-gray-700">Payee Name</label>
