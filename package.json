@@ -1,12 +1,14 @@
 {
   "name": "qr-code-gentreater",
   "version": "0.1.0",
+  "description": "Professional high-resolution QR code generator with real-time styling and export capabilities",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "clsx": "^2.1.1",
