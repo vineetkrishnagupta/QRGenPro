@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QRGen Pro - Professional QR Code Generator
 
-## Getting Started
+QRGen Pro is a modern, high-performance web application for creating, customizing, and exporting high-resolution QR codes. Designed for both personal and enterprise use, it supports diverse data schemas and extensive visual styling options.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- **Multiple Data Formats**:
+  - **URL & Text**: Encode links, plain text snippets, and notes.
+  - **WiFi**: Connect directly with WPA, WEP, or open network configurations.
+  - **vCard**: Digital business cards containing names, phone numbers, emails, addresses, and organizations.
+  - **Communication**: Pre-filled SMS, Email (with subject/body), WhatsApp, and Phone dialer links.
+  - **Payments & Location**: Direct UPI payment strings with payee info and GPS geolocation coordinates.
+
+- **Real-Time Visual Customization**:
+  - **Pattern Styles**: Square, Rounded, Dots, Classy, Classy Rounded, and Extra Rounded.
+  - **Corner Markers**: Customizable corner squares and corner dots.
+  - **Color Control**: Full hex and color-picker support for foreground and background colors.
+  - **Logo Embedding**: Embed brand logos with automatic sizing and error correction recommendations.
+  - **Error Correction Levels**: Low (7%), Medium (15%), Quartile (25%), and High (30%).
+
+- **Export Formats**:
+  - Download crisp vector **SVG** for print media.
+  - Export raster **PNG** and **JPEG** for digital sharing.
+  - Built-in browser **Print** optimization.
+
+---
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router with Turbopack)
+- **Language**: TypeScript 5
+- **UI & Styling**: React 19, Tailwind CSS v4, Lucide Icons
+- **State Management**: Zustand
+- **QR Rendering Engine**: `qr-code-styling`
+
+---
+
+## Project Structure
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+├── src/
+│   ├── app/                 # Next.js App Router pages and metadata
+│   │   ├── layout.tsx       # Root layout with fonts & metadata
+│   │   ├── page.tsx         # Main generator dashboard & SEO
+│   │   ├── login/           # Authentication login page
+│   │   └── signup/          # User registration page
+│   ├── components/
+│   │   ├── layout/          # Header, LeftPanel, RightPanel, BlogSection
+│   │   └── qr-generator/    # DataForm, CustomizationPanel, QRPreview
+│   ├── lib/                 # Utility functions
+│   ├── store/               # Zustand state stores (qrStore, authStore)
+│   └── types/               # TypeScript interfaces and QR type definitions
+```
