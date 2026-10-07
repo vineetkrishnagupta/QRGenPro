@@ -53,3 +53,53 @@ QRGen Pro is a modern, high-performance web application for creating, customizin
 │   ├── store/               # Zustand state stores (qrStore, authStore)
 │   └── types/               # TypeScript interfaces and QR type definitions
 ```
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- **Node.js**: `v18.18.0` or higher (Node 20+ recommended)
+- **Package Manager**: `npm`, `pnpm`, or `yarn`
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/vineetkrishnagupta/QRGenPro.git
+   cd QRGenPro
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the local development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**:
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the generator.
+
+---
+
+## Available Scripts
+
+| Command | Description |
+| :--- | :--- |
+| `npm run dev` | Starts the Next.js Turbopack development server on port 3000 |
+| `npm run build` | Builds the optimized production static export and SSR bundle |
+| `npm run start` | Runs the production build locally |
+| `npm run lint` | Runs ESLint analysis across TypeScript and React files |
+
+---
+
+## Contributing
+
+1. Create a feature branch: `git checkout -b feature/your-feature-name`
+2. Ensure changes compile cleanly: `npm run build`
+3. Commit using conventional commit format: `git commit -m "feat: description"`
+4. Push and open a pull request.
