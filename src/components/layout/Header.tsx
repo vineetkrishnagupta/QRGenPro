@@ -21,7 +21,7 @@ export function Header() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
             </svg>
           </div>
-          <h1 className="text-xl font-bold text-gray-900 tracking-tight flex items-center gap-1.5">
+          <h1 className="text-xl font-bold text-gray-900 tracking-wide flex items-center gap-2">
             <span>QRGen</span>
             <span className="text-[#4b8b3b]">Pro</span>
             <span className="text-[10px] font-semibold text-[#4b8b3b] bg-green-50 border border-green-200 px-1.5 py-0.5 rounded-full uppercase tracking-wider hidden sm:inline-block">v1.0</span>
