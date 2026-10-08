@@ -151,7 +151,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
+          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 gap-4">
             <p>&copy; {new Date().getFullYear()} QRGen Pro. All rights reserved.</p>
             <p className="mt-2 md:mt-0">Built with Next.js &amp; Tailwind CSS</p>
           </div>
