@@ -286,7 +286,7 @@ export function BlogSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-[#f9f9f9] rounded-xl overflow-hidden text-left border border-gray-100 flex flex-col">
             <div className="h-48 bg-orange-100 w-full relative">
-               <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&q=80" alt="Pizza box" className="w-full h-full object-cover opacity-60" />
+               <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&q=80" alt="Pizza box" loading="lazy" className="w-full h-full object-cover opacity-60" />
                <div className="absolute inset-0 flex items-center justify-center">
                  <div className="bg-white p-2 rounded shadow-lg"><div className="w-16 h-16 bg-black rounded-sm" style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 20% 20%, 20% 80%, 80% 80%, 80% 20%, 20% 20%)' }}></div></div>
                </div>
