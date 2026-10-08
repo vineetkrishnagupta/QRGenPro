@@ -74,6 +74,7 @@ QRGen Pro is a modern, high-performance web application for creating, customizin
 2. **Install dependencies**:
    ```bash
    npm install
+   # Or use yarn / pnpm install
    ```
 
 3. **Start the local development server**:
