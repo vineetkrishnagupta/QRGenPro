@@ -27,9 +27,13 @@ export function QRPreview({ qrCodeRef }: QRPreviewProps) {
       }
     } else {
       // Update existing QR code
-      qrCodeRef.current.update({
-        ...qrOptions,
-      });
+      try {
+        qrCodeRef.current.update({
+          ...qrOptions,
+        });
+      } catch (error) {
+        console.error("Failed to update QR code:", error);
+      }
       setIsReady(true);
     }
   }, [qrOptions, qrCodeRef]);
