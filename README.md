@@ -103,3 +103,9 @@ QRGen Pro is a modern, high-performance web application for creating, customizin
 2. Ensure changes compile cleanly: `npm run build`
 3. Commit using conventional commit format: `git commit -m "feat: description"`
 4. Push and open a pull request.
+
+---
+
+## License
+
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
