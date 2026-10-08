@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, Link, FileText, Smartphone, Package, FileBarChart, Users } from "lucide-react";
+import { ChevronDown, Link, FileText, Smartphone, FileBarChart, Users } from "lucide-react";
 
 export function BlogSection() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
